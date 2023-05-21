@@ -1,0 +1,36 @@
+﻿@model UserLoginViewModel
+
+<div class="login">
+
+    <div class="d-flex justify-content-center">
+
+
+        <form method="post" class="col-10 col-xl-6">
+            <div class="mb-3">
+                <textarea></textarea>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <small class="text-danger"><span asp-validation-for="Email"></span></small>
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <small class="text-danger"><span asp-validation-for="Password"></span></small>
+            </div>
+            
+            <div class="mt-3 mb-3">
+                <div class="d-grid">
+                    <button class="btn btn-success">Login</button>
+
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>

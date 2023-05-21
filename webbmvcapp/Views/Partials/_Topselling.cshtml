@@ -1,0 +1,22 @@
+﻿@model TopSellingViewModel
+
+
+<section class="top-selling">
+    <div class="container-fluid">
+        <h1 class="collection-title">Top selling products in this week</h1>
+        <div class="collection-grid">
+
+            <!-- collection-item start -->
+            @foreach(var item in Model.Item)
+            {
+                <partial name="/Views/Partials/_TopSellingItem.cshtml" model="item" />
+            }
+            <!-- collection-item end -->
+            
+        </div>
+        <div class="load-more">
+            <button class="btn-outline-white me-1"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="btn-outline-white ms-1"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,82 @@
+﻿@model webbmvcapp.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/productdetail.css" rel="stylesheet" />
+<section class="ProductSection">
+    <div class="container">
+<div class="card-wrapper">
+    <div class="card">
+        <!-- card left -->
+        <div class="product-imgs">
+            <div class="img-display">
+                <div class="img-showcase">
+                    <img src="@Model.ImageURL" alt="shoe image">
+                            <img src="@Model.ImageURL" alt="shoe image">
+                            <img src="@Model.ImageURL" alt="shoe image">
+                            <img src="@Model.ImageURL" alt="shoe image">
+                </div>
+            </div>
+            <div class="img-select">
+                <div class="img-item">
+                    <a href="#" data-id="1">
+                                <img src="@Model.ImageURL" alt="shoe image">
+                    </a>
+                </div>
+                <div class="img-item">
+                    <a href="#" data-id="2">
+                                <img src="@Model.ImageURL" alt="shoe image">
+                    </a>
+                </div>
+                <div class="img-item">
+                    <a href="#" data-id="3">
+                                <img src="@Model.ImageURL" alt="shoe image">
+                    </a>
+                </div>
+                <div class="img-item">
+                    <a href="#" data-id="4">
+                                <img src="@Model.ImageURL" alt="shoe image">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- card right -->
+        <div class="product-content">
+            <h2 class="product-title">@Model.Name</h2>
+            <a href="#" class="product-link"></a>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>4.7(21)</span>
+            </div>
+
+            <div class="product-price">
+                <p class="new-price">Price: <span>$@Model.Price</span></p>
+            </div>
+
+            <div class="product-detail">
+                <h2>Description: </h2>
+                <p>@Model.Description</p>
+                <ul>
+                    <li>Category: <span>@Model.Category</span></li>
+                </ul>
+            </div>
+
+            <div class="purchase-info">
+                <input type="number" min="0" value="1">
+                <button type="button" class="btn">
+                    Add to Cart <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button type="button" class="btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<script src="~/js/productdetail.js"></script>

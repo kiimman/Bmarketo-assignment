@@ -1,0 +1,58 @@
+﻿@model List<webbmvcapp.ViewModels.ContactViewModel>
+
+@{
+    ViewData["Title"] = "Contacts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="ProductSection">
+    <div class="container">
+        <h1 class="collection-title">All contacts</h1>
+        <hr />
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            User Name
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Phone Number
+                        </th>
+                        <th>
+                            Company
+                        </th>
+                        <th>
+                            Message
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td>
+                                @item.Email
+                            </td>
+                            <td>
+                                @item.PhoneNumber
+                            </td>
+                            <td>
+                                @item.Company
+                            </td>
+                            <td>
+                                @item.Message
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
